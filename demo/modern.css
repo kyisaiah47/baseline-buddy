@@ -1,0 +1,31 @@
+.container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    aspect-ratio: 16/9;
+}
+
+.card {
+    display: flex;
+    transition: all 0.3s ease;
+    transform: translateY(0);
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+@container (min-width: 300px) {
+    .card {
+        font-size: 1.2rem;
+    }
+}
+
+.special:has(.highlight) {
+    animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}

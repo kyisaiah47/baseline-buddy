@@ -1,0 +1,28 @@
+.container {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.card {
+    display: flex;
+    aspect-ratio: 16/9;
+    backdrop-filter: blur(10px);
+    transform: translateY(0);
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+@container (min-width: 600px) {
+    .responsive-element {
+        font-size: 1.2rem;
+    }
+}
+
+.modern-selector:has(> .child) {
+    color-scheme: dark light;
+    accent-color: #007acc;
+}

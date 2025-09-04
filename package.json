@@ -1,0 +1,125 @@
+{
+  "name": "baseline-buddy",
+  "displayName": "Baseline Buddy",
+  "description": "Shows Baseline compatibility for web features",
+  "version": "0.0.1",
+  "publisher": "baseline-buddy",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/baseline-buddy/baseline-buddy"
+  },
+  "engines": {
+    "vscode": "^1.103.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [
+    "*"
+  ],
+  "main": "./out/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "baseline-buddy.test",
+        "title": "Test Baseline Buddy"
+      },
+      {
+        "command": "baseline-buddy.showFeatureDetails",
+        "title": "Show Feature Details"
+      },
+      {
+        "command": "baseline-buddy.installPolyfill",
+        "title": "Install Polyfill"
+      },
+      {
+        "command": "baseline-buddy.refreshCompatibility",
+        "title": "Refresh Compatibility Data"
+      }
+    ],
+    "keybindings": [
+      {
+        "command": "baseline-buddy.test",
+        "key": "ctrl+shift+b",
+        "mac": "cmd+shift+b"
+      }
+    ],
+    "configuration": {
+      "title": "Baseline Buddy",
+      "properties": {
+        "baseline-buddy.enableHover": {
+          "type": "boolean",
+          "default": true,
+          "description": "Enable hover tooltips showing baseline compatibility"
+        },
+        "baseline-buddy.enableDecorations": {
+          "type": "boolean",
+          "default": false,
+          "description": "Enable inline decorations showing compatibility status"
+        },
+        "baseline-buddy.enableCodeLens": {
+          "type": "boolean",
+          "default": false,
+          "description": "Enable CodeLens showing compatibility warnings above problematic code"
+        },
+        "baseline-buddy.enableProblems": {
+          "type": "boolean",
+          "default": true,
+          "description": "Show compatibility issues in Problems panel"
+        },
+        "baseline-buddy.enableStatusBar": {
+          "type": "boolean",
+          "default": true,
+          "description": "Show compatibility info in status bar"
+        },
+        "baseline-buddy.showUnsupportedFeatures": {
+          "type": "boolean", 
+          "default": true,
+          "description": "Show compatibility info for features with limited availability"
+        },
+        "baseline-buddy.includeBrowserList": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "default": ["chrome", "firefox", "safari", "edge"],
+          "description": "List of browsers to consider for compatibility checks"
+        },
+        "baseline-buddy.severity": {
+          "type": "string",
+          "enum": ["error", "warning", "info", "hint"],
+          "default": "warning",
+          "description": "Severity level for compatibility issues in Problems panel"
+        },
+        "baseline-buddy.enablePolyfillSuggestions": {
+          "type": "boolean",
+          "default": true,
+          "description": "Show polyfill suggestions for unsupported features"
+        }
+      }
+    }
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "pretest": "npm run compile && npm run lint",
+    "lint": "eslint src",
+    "test": "vscode-test"
+  },
+  "devDependencies": {
+    "@types/mocha": "^10.0.10",
+    "@types/node": "22.x",
+    "@types/vscode": "^1.103.0",
+    "@typescript-eslint/eslint-plugin": "^8.39.0",
+    "@typescript-eslint/parser": "^8.39.0",
+    "@vscode/test-cli": "^0.0.11",
+    "@vscode/test-electron": "^2.5.2",
+    "eslint": "^9.32.0",
+    "typescript": "^5.9.2"
+  },
+  "dependencies": {
+    "web-features": "^2.46.0"
+  }
+}
