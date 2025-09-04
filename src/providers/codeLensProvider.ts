@@ -64,10 +64,10 @@ export class BaselineCodeLensProvider implements vscode.CodeLensProvider {
 
     private getStatusIcon(status: string): string {
         switch (status) {
-            case 'widely-available': return '$(check-all)';
-            case 'newly-available': return '$(clock)';
-            case 'limited-availability': return '$(warning)';
-            default: return '$(question)';
+            case 'widely-available': return '✅';
+            case 'newly-available': return '🟡';
+            case 'limited-availability': return '⚠️';
+            default: return '❓';
         }
     }
 }
