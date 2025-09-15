@@ -1,9 +1,9 @@
 # Baseline Buddy
 
-A VS Code extension that shows web feature compatibility information directly in your edit
+A VS Code extension that shows web feature compatibility information directly in your edit or using the Baseline standard.
 
 [![YouTube Demo](https://img.shields.io/badge/▶️%20Watch%20on%20YouTube-red?logo=youtube&logoColor=white)](https://www.youtube.com/watch?v=jksl2yLWIbQ)
-[![Watch the demo](https://img.youtube.com/vi/jksl2yLWIbQ/maxresdefault.jpg)](https://www.youtube.com/watch?v=jksl2yLWIbQ)or using the Baseline standard.
+[![Watch the demo](https://img.youtube.com/vi/jksl2yLWIbQ/maxresdefault.jpg)](https://www.youtube.com/watch?v=jksl2yLWIbQ)
 
 ## Features
 
