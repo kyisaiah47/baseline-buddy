@@ -1,84 +1,52 @@
-# Baseline Buddy
+<div align="center">
 
-A VS Code extension that shows web feature compatibility information directly in your edit or using the Baseline standard.
+<!-- BANNER_PLACEHOLDER -->
 
-[![YouTube Demo](https://img.shields.io/badge/▶️%20Watch%20on%20YouTube-red?logo=youtube&logoColor=white)](https://www.youtube.com/watch?v=jksl2yLWIbQ)
-[![Watch the demo](https://img.youtube.com/vi/jksl2yLWIbQ/maxresdefault.jpg)](https://www.youtube.com/watch?v=jksl2yLWIbQ)
+# 🔧 Baseline Buddy
 
-## Features
+**Know if a web feature is safe to use — browser compatibility intel right inside VS Code**
 
-- **Hover tooltips** - Get instant compatibility information when hovering over CSS properties, JavaScript APIs, HTML elements, and TypeScript features
-- **Multi-language support** - Works with CSS, JavaScript, TypeScript, and HTML files
-- **Real-time feedback** - See compatibility status with visual indicators (✅ Widely Available, 🟡 Newly Available, ⚠️ Limited Availability)
-- **Configurable** - Customize which features to show and hide through VS Code settings
+![VS Code](https://img.shields.io/badge/VS%20Code-007ACC?style=flat-square&logo=visualstudiocode&logoColor=white) ![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white)
 
-## Supported Features
+</div>
 
-### CSS
-- Layout: Grid, Flexbox, Subgrid, Gap properties
-- Container Queries and CSS selectors (:has, :is, :where)
-- Modern properties: aspect-ratio, backdrop-filter, clip-path
-- Transforms, transitions, and animations
-- Color schemes and visual effects
+<br/>
 
-### JavaScript
-- Modern APIs: fetch, AbortController, URL API
-- Async/await and Promises
-- Observer APIs (Intersection, Resize, Mutation, Performance)
-- Array and String methods (includes, find, replaceAll, etc.)
-- Web APIs: Geolocation, LocalStorage, FormData
+Baseline Buddy is a VS Code extension that surfaces web feature compatibility data directly in your editor as you write CSS, JavaScript, TypeScript, and HTML. Powered by the [Baseline](https://web.dev/baseline) standard, it gives you instant, in-context feedback on whether a feature is widely supported, newly available, or still limited — so you can ship with confidence without leaving your editor.
 
-### HTML
-- Form input types (date, email, tel, url, etc.)
-- Semantic elements (article, section, nav, etc.)
-- Media elements (video, audio, picture)
-- Interactive elements (details, summary, dialog)
+## ✨ Features
 
-### TypeScript
-- All JavaScript features plus TypeScript-specific syntax
-- Interfaces, type aliases, enums
-- Access modifiers, abstract classes
-- Namespaces and advanced typing features
+- **Hover tooltips** — Instant compatibility info when hovering over CSS properties, JS APIs, HTML elements, and TypeScript features
+- **Multi-language support** — Works across CSS, JavaScript, TypeScript, and HTML files
+- **Baseline status indicators** — Clear visual signals: ✅ Widely Available, 🟡 Newly Available, ⚠️ Limited Availability
+- **Broad feature coverage** — Detects CSS layout, modern JS APIs, semantic HTML, observer APIs, and more
+- **Configurable** — Control which features appear and which browsers to target through VS Code settings
+- **Zero dependencies** — No external tools or runtimes required
 
-## Requirements
+## 🎥 Demo
 
-- VS Code 1.103.0 or higher
-- No additional dependencies required
+[![Watch Demo](https://img.shields.io/badge/YouTube-Watch%20Demo-FF0000?style=for-the-badge&logo=youtube&logoColor=white)](https://www.youtube.com/watch?v=jksl2yLWIbQ)
 
-## Extension Settings
+## 🛠️ Tech Stack
 
-This extension contributes the following settings:
+VS Code Extension API · Baseline · TypeScript · CSS / JS / HTML language support
 
-* `baseline-buddy.enableHover`: Enable/disable hover tooltips (default: true)
-* `baseline-buddy.showUnsupportedFeatures`: Show compatibility info for features with limited availability (default: true)
-* `baseline-buddy.includeBrowserList`: List of browsers to consider for compatibility checks (default: ["chrome", "firefox", "safari", "edge"])
+## 🚀 Getting Started
 
-## How to Use
+**Requirements:** VS Code 1.103.0 or higher — no additional dependencies needed.
 
-1. Open any CSS, JavaScript, TypeScript, or HTML file
-2. Hover over web features like `display: grid`, `fetch()`, `<article>`, etc.
-3. See instant compatibility information with visual status indicators
-4. Configure settings through VS Code preferences to customize behavior
+1. Install the extension from the VS Code Marketplace
+2. Open any CSS, JavaScript, TypeScript, or HTML file
+3. Hover over a web feature (e.g. `display: grid`, `fetch()`, `<dialog>`) to see its Baseline status
 
-## Known Issues
+**Available settings:**
 
-- Some complex regex patterns may not catch all feature variations
-- Baseline data is updated periodically - very new features may not be included immediately
+| Setting | Default | Description |
+|---|---|---|
+| `baseline-buddy.enableHover` | `true` | Enable/disable hover tooltips |
+| `baseline-buddy.showUnsupportedFeatures` | `true` | Show info for limited-availability features |
+| `baseline-buddy.includeBrowserList` | `["chrome","firefox","safari","edge"]` | Browsers to consider for compatibility |
 
-## Release Notes
+## 📄 License
 
-### 0.0.1
-
-Initial release with full feature detection and baseline compatibility checking.
-
----
-
-## Contributing
-
-This project is open source and contributions are welcome! Please feel free to submit issues and pull requests.
-
-## License
-
-MIT License - see LICENSE file for details.
-
-**Enjoy coding with confidence knowing your web features are Baseline compatible!** 🚀
+MIT
